@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Media Queries</title>
+    <link rel="shortcut icon" href="img/airplane.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1><img src="img/logo_ibge.png" alt="" width="50px" id="logo-ibge"></h1>
+    </header>
+    <main>
+        <section class="main-grid">
+            <button class="card" id="franca"><span>França</span></button>
+            <button class="card" id="usa"><span>Estados Unidos</span></button>
+            <button class="card" id="espanha"><span>Espanha</span></button>
+            <button class="card" id="china"><span>China</span></button>
+            <button class="card" id="italia"><span>Itália</span></button>
+            <button class="card" id="turquia"><span>Turquia</span></button>
+
+            <!-- MODAL -->
+            <div id="modal-overlay" class="modal-overlay">
+                <div class="modal-container">
+                    <button id="modal-close-btn" class="modal-close-btn">✕</button>
+
+                    <div class="modal-content">
+                        <div class="modal-image-container" >
+                            <a href="" class="prev">&#10094;</a>
+                            <a href="" class="next">&#10095;</a>
+                            <img id="modal-image" src="https://www.acritica.com/image/policy:1.108845.1647051102:1647051102/image.jpg?f=default&w=1200" alt="Imagem dos países">
+                        </div>
+
+                        <div class="modal-info">
+                            <h2 id="modal-title">Seja Muito Bem vindo </h2>
+                            <p id="modal-descricao">Vamos viajar um pouco por aqui e conhecer lugares turisticos ✈️🧑‍✈️?</p>
+
+                            <!-- SLIDER DE LUGARES TURÍSTICOS -->
+                            <div class="slider-section">
+                                <h3>Lugares Turísticos</h3>
+                                <div class="slider-wrapper" id="slider-wrapper">
+                            <div class="slider-track" id="slider-track"></div>
+                                </div>
+                                <div class="slider-dots" id="slider-dots"></div>
+                            </div>
+
+                            <div class="modal-buttons" style="padding-top: 5%;">
+                                <button class="btn-primary " id="btn-saiba-mais" >
+                                    Saiba Mais
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Marley Castro🚀</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

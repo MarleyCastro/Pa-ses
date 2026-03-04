@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+:root {
+    --primary-color: #ffffff;
+    --font-color: #e0e0e0;
+    --bg-color: #202020;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+#busca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: auto;
+    padding: 10px 5%;
+    border-radius: 10px;
+    margin-left: 5%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #333;
+    width: 90%;
+    color: #fff;
+    font-size: larger;
+}
+
+/* deixe responsivo 
+#pesquisa-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+} proximas atualizações
+*/
+
+
+/* O CONTAINER (O PAI) */
+.main-grid {
+    display: grid;
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+/* um potão ao lado diereito da imagem outro lado esquerdo */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 10%;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* O ITEM (O FILHO) */
+/* retirar barra de rolagem */
+.card {
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: #202020 0px 0px 10px;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    min-height: 150px;
+}
+
+.card:active {
+    transform: scale(0.95);
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    background: #333;
+}
+
+.card span {
+    background-color: #20202086;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+/* IMAGEM DAS BANDEIRAS */
+#franca {
+    background: url(img/bandeira-franca.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#usa {
+    background: url(img/bandeira-usa.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#espanha {
+    background: url(img/bandeira-espanha.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#china {
+    background: url(img/bandeira-china.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#italia {
+    background: url(img/bandeira-italia.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#turquia {
+    background: url(img/bandeira-turquia.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* modal */
+.modal-overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+
+.modal-overlay.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    background: var(--bg-color);
+    border-radius: 1.5rem;
+    max-width: 900px;
+    width: 90%;
+    max-height: 98vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--border-color);
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1);
+}
+
+.modal-close-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    background: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.modal-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 200px;
+}
+
+/* Estilo para a imagem do carro */
+#modal-image {
+    width: 100%;
+    height: 250px;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+
+.modal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-info h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.modal-info p {
+    color: var(--font-color);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.modal-close-btn {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botão */
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    color: #202020;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background: #1a4dd8;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(47, 33, 246, 0.4)
+}
+
+.btn-secondary {
+    background: transparent;
+}
+
+.btn-secondary:hover {
+    color: #202020;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(246, 114, 33, 0.3);
+}
+
+/* ── SLIDER ── */
+.slider-section {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 16px;
+}
+
+.slider-section h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 12px 0;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    padding: 30px 14px 12px;
+    border-radius: 0 0 12px 12px;
+}
+
+
+.slide-caption strong {
+    display: block;
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+}
+
+.slide-caption span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+}
+
+/* Dots */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background: #fff;
+    transform: scale(1.3);
+}
+
+/* Prev / Next arrows */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 0.2s;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Breakpoint para mini celulares - 1 coluna */
+@media (max-width: 480px) {
+    #logo-ibge {
+        padding-top: 10%;
+        width: 40%;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .modal-image-container {
+        display: none;
+    }
+
+    .prev,
+    .next {
+        width: 48px;
+        height: 48px;
+    }
+
+    .prev {
+        left: 12px;
+    }
+
+    .next {
+        right: 12px;
+    }
+
+    #modal-image {
+        margin-top: 10rem;
+        width: 100%;
+        max-height: 320px;
+        object-fit: contain;
+        margin-top: 1rem;
+    }
+}
+
+/* Breakpoint para celulares - 2 colunas */
+@media (min-width: 481px) {
+    #logo-ibge {
+        padding-top: 1%;
+        width: 30%;
+    }
+
+    .main-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .prev,
+    .next {
+        width: 52px;
+        height: 52px;
+    }
+
+    .prev {
+        left: 16px;
+    }
+
+    .next {
+        right: 16px;
+    }
+
+}
+
+/* Breakpoint para tablets - 3 colunas */
+@media (min-width: 768px) {
+    #logo-ibge {
+        padding-top: 1%;
+        width: 30%;
+    }
+
+    .main-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .modal-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prev,
+    .next {
+        width: 58px;
+        height: 58px;
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .next {
+        right: 20px;
+    }
+
+    #modal-image {
+        display: block;
+        max-height: 430px;
+        margin-top: 1.5rem;
+    }
+}
+
+/* Breakpoint para desktops - 6 colunas */
+@media (min-width: 1280px) {
+    #logo-ibge {
+        padding-top: 1%;
+        width: 30%;
+    }
+
+    .main-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .prev,
+    .next {
+        width: 64px;
+        height: 64px;
+    }
+
+    .prev {
+        left: 24px;
+    }
+
+    .next {
+        right: 24px;
+    }
+
+    #modal-image {
+        display: block;
+        max-height: 520px;
+        margin-top: 2rem;
+    }
+}

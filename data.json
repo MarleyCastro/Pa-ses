@@ -1,0 +1,140 @@
+[
+  {
+    "id": "franca",
+    "nome": "França",
+    "link": "https://pt.wikipedia.org/wiki/Fran%C3%A7a",
+    "descricao": "A França é um país no coração da Europa Ocidental, famoso por sua cultura sofisticada, gastronomia refinada e monumentos icônicos. Paris, a capital, é considerada a Cidade Luz e um dos destinos mais visitados do mundo.",
+    "lugares": [
+      {
+        "nome": "Torre Eiffel",
+        "descricao": "O monumento mais famoso da França, construído em 1889.",
+        "imagem": "https://cdn-imgix.headout.com/media/images/c90f7eb7a5825e6f5e57a5a62d05399c-25058-BestofParis-EiffelTower-Cruise-Louvre-002.jpg"
+      },
+      {
+        "nome": "Museu do Louvre",
+        "descricao": "O maior museu de arte do mundo, lar da Mona Lisa.",
+        "imagem": "https://www.mercadoeeventos.com.br/wp-content/uploads/2024/08/Somente-em-2023-o-museu-recebeu-quase-9-milhoes-de-visitantes-ReproducaoHellotickets.png"
+      },
+      {
+        "nome": "Palácio de Versalhes",
+        "descricao": "Magnífico palácio real com jardins exuberantes.",
+        "imagem": "https://portaltriptips.com.br/wp-content/uploads/2024/01/Palacio-de-Versalhes_Pinterest.jpg"
+      }
+    ]
+  },
+  {
+    "id": "usa",
+    "nome": "Estados Unidos",
+    "link": "https://pt.wikipedia.org/wiki/Estados_Unidos",
+    "descricao": "Os Estados Unidos são uma das maiores potências mundiais, com uma diversidade cultural e geográfica impressionante. Do deserto ao ártico, das metrópoles às paisagens naturais, o país oferece experiências únicas.",
+    "lugares": [
+      {
+        "nome": "Grand Canyon",
+        "descricao": "Uma das maiores maravilhas naturais do mundo, no Arizona.",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/USA_09847_Grand_Canyon_Luca_Galuzzi_2007.jpg/800px-USA_09847_Grand_Canyon_Luca_Galuzzi_2007.jpg"
+      },
+      {
+        "nome": "Estátua da Liberdade",
+        "descricao": "Símbolo da liberdade e democracia em Nova York.",
+        "imagem": "https://rotasdeviagem.com.br/wp-content/uploads/2020/06/estatua-da-liberdade-historia-e-curiosidades.jpg"
+      },
+      {
+        "nome": "Times Square",
+        "descricao": "O coração vibrante de Nova York, famoso por seus letreiros luminosos.",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/800px-New_york_times_square-terabass.jpg"
+      }
+    ]
+  },
+  {
+    "id": "espanha",
+    "nome": "Espanha",
+    "link": "https://pt.wikipedia.org/wiki/Espanha",
+    "descricao": "A Espanha é um país vibrante no sul da Europa, conhecido por sua arquitetura única, flamenco, praias deslumbrantes e culinária diversificada. Com cidades como Barcelona e Madri, oferece uma mistura perfeita de história e modernidade.",
+    "lugares": [
+      {
+        "nome": "Sagrada Família",
+        "descricao": "A obra-prima inacabada de Antoni Gaudí em Barcelona.",
+        "imagem": "https://www.unitur.com.br/wp-content/uploads/2018/06/sagrada-familia-barcelona-1015x675.png"
+      },
+      {
+        "nome": "Alhambra",
+        "descricao": "Palácio mouro medieval em Granada, patrimônio da UNESCO.",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/d/de/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg"
+      },
+      {
+        "nome": "Parque Güell",
+        "descricao": "Jardim público com estruturas arquitetônicas de Gaudí.",
+        "imagem": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0f/de/f8/ae.jpg"
+      }
+    ]
+  },
+  {
+    "id": "china",
+    "nome": "China",
+    "link": "https://pt.wikipedia.org/wiki/China",
+    "descricao": "A China é uma das civilizações mais antigas do mundo, com uma história rica de mais de 5.000 anos. É o país mais populoso do planeta e combina tradições milenares com uma modernidade deslumbrante nas suas megalópoles.",
+    "lugares": [
+      {
+        "nome": "Grande Muralha",
+        "descricao": "Uma das maiores obras de engenharia da história humana.",
+        "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsdrTUfvS3TZW3f_ESsey3xbPq3ai0pokBdg&s"
+      },
+      {
+        "nome": "Cidade Proibida",
+        "descricao": "Antigo palácio imperial no centro de Pequim.",
+        "imagem": "https://s2.glbimg.com/4ugf4Nx5FvW6fcHAIwSfG8b50dk=/smart/e.glbimg.com/og/ed/f/original/2021/03/12/fotos-revelam-lado-pouco-conhecido-da-cidade_proibida_3.jpg"
+      },
+      {
+        "nome": "Rio Li e Guilin",
+        "descricao": "Paisagem de montanhas cársticas e rios cristalinos.",
+        "imagem": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/90/79/33.jpg"
+      }
+    ]
+  },
+  {
+    "id": "italia",
+    "nome": "Itália",
+    "link": "https://pt.wikipedia.org/wiki/It%C3%A1lia",
+    "descricao": "A Itália é o berço da civilização ocidental e do Renascimento. Com mais de 50 patrimônios da UNESCO, o país é um museu a céu aberto, além de ser famoso mundialmente pela sua culinária, moda e design.",
+    "lugares": [
+      {
+        "nome": "Coliseu",
+        "descricao": "O anfiteatro romano mais famoso do mundo, em Roma.",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/800px-Colosseo_2020.jpg"
+      },
+      {
+        "nome": "Canal Grande de Veneza",
+        "descricao": "A cidade flutuante mais romântica e única do mundo.",
+        "imagem": "https://midias-turismo.eurodicas.com.br/wp-content/uploads/2025/02/melhores-lugares-para-se-hospedar-em-veneza-1-2.jpg.webp"
+      },
+      {
+        "nome": "Torre de Pisa",
+        "descricao": "A famosa torre inclinada que desafia a gravidade há séculos.",
+        "imagem": "https://italianismo.com.br/wp-content/uploads/2018/08/pisa.png"
+      }
+    ]
+  },
+  {
+    "id": "turquia",
+    "nome": "Turquia",
+    "link": "https://pt.wikipedia.org/wiki/Turquia",
+    "descricao": "A Turquia é uma ponte entre a Europa e a Ásia, com uma história que abrange impérios milenares. Istambul, sua maior cidade, é a única metrópole do mundo situada em dois continentes, com uma arquitetura e cultura únicas.",
+    "lugares": [
+      {
+        "nome": "Hagia Sophia",
+        "descricao": "Majestosa mesquita-museu símbolo de Istambul.",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hagia_Sophia_Mars_2013.jpg/800px-Hagia_Sophia_Mars_2013.jpg"
+      },
+      {
+        "nome": "Capadócia",
+        "descricao": "Paisagem lunar com chaminés de fada e balões de ar quente.",
+        "imagem": "https://passagenspromo.com.br/blog/wp-content/uploads/2022/01/Capadocia-740x415.jpg"
+      },
+      {
+        "nome": "Pamukkale",
+        "descricao": "Cascatas de calcário branco com piscinas termais naturais.",
+        "imagem": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/15/71/73/68.jpg"
+      }
+    ]
+  }
+]
